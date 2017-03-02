@@ -3,7 +3,7 @@ package cn.tedu.cloud_note.util;
 import java.security.MessageDigest;
 import java.util.UUID;
 
-import org.apache.tomcat.util.codec.binary.Base64;
+import org.apache.commons.codec.binary.Base64;
 
 public class NoteUtil {
 	/**
