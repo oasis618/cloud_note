@@ -4,7 +4,18 @@
   <artifactId>cloud_note</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
+  
+  <name>cloud_note</name>
+  <url>http://maven.apache.org</url>
+  <properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
   <dependencies>
+  <dependency>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-resources-plugin</artifactId>
+    <version>3.3.9</version>
+</dependency>
   	<dependency>
   		<groupId>org.mybatis</groupId>
   		<artifactId>mybatis</artifactId>
@@ -14,6 +25,7 @@
   		<groupId>junit</groupId>
   		<artifactId>junit</artifactId>
   		<version>4.12</version>
+  		<scope>test</scope>
   	</dependency>
   	<dependency>
   		<groupId>org.springframework</groupId>
@@ -51,11 +63,6 @@
   		<version>2.2.3</version>
   	</dependency>
   	<dependency>
-  		<groupId>mysql</groupId>
-  		<artifactId>mysql-connector-java</artifactId>
-  		<version>5.1.37</version>
-  	</dependency>
-  	<dependency>
   		<groupId>commons-codec</groupId>
   		<artifactId>commons-codec</artifactId>
   		<version>1.8</version>
@@ -65,5 +72,30 @@
   		<artifactId>aspectjweaver</artifactId>
   		<version>1.5.4</version>
   	</dependency>
+  	<dependency>
+  		<groupId>mysql</groupId>
+  		<artifactId>mysql-connector-java</artifactId>
+  		<version>5.1.37</version>
+  	</dependency>
   </dependencies>
+<build>
+		<finalName>cloud_note</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<webResources>
+						<resource>
+							<filtering>true</filtering>
+							<targetPath>WEB-INF/classes</targetPath>
+							<directory>src/main/resources</directory>
+						</resource>
+					</webResources>
+					<warSourceDirectory>src/main/webapp</warSourceDirectory>
+					<webXml>src/main/webapp/WEB-INF/web.xml</webXml>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>

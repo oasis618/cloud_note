@@ -25,13 +25,23 @@
 	<bean id="dbcp" 
 	class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="username" value="root"></property>
-		<property name="password" value=""></property>
+		<property name="password" value="root"></property>
 		<property name="driverClassName" 
 		value="com.mysql.jdbc.Driver"></property>
-		<!-- localhost可以用/代替 -->
 		<property name="url" 
 		value="jdbc:mysql:///cloud_note"></property>
 	</bean>
+	<!-- <bean id="dbcp" 
+	class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="username" value="a18a7c8c37454c66b4c56ed8d1e52fba"></property>
+		<property name="password" value="c6b4c3886657479a858a60f81f411afb"></property>
+		<property name="driverClassName" 
+		value="com.mysql.jdbc.Driver"></property>
+		localhost可以用/代替
+		<property name="url" 
+		value="jdbc:mysql://sqld.duapp.com:4050/LuJqPGscuHClzIfXgjyv"></property>
+		<property name="maxWait" value="60000"></property>
+	</bean> -->
 	<!-- 配置SqlSessionFactory -->
 	<bean id="ssf" 
 	class="org.mybatis.spring.SqlSessionFactoryBean">

@@ -3,7 +3,8 @@
 	margin:0;
 }
 body{
-	background:#232332;
+	/* background:#232332; */
+	background: url(../images/note5.png) no-repeat left top;
 	overflow:hidden;
 	font-family:'微软雅黑';
 }
