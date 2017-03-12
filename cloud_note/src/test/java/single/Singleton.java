@@ -17,5 +17,7 @@ public class Singleton {
 	public void writer(String content){
 	    System.out.println(content);
 	}
-	
+	public void write(String key){
+		System.out.println(key);
+	}
 }
