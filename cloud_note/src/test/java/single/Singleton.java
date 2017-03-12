@@ -11,5 +11,11 @@ public class Singleton {
 	public Singleton() {
 		System.out.println("singleton+execute");
 	}
+	public void reader(String file){
+	    System.out.println(file);
+	}
+	public void writer(String content){
+	    System.out.println(content);
+	}
 	
 }
