@@ -11,7 +11,7 @@ public class Singleton {
 	public Singleton() {
 		System.out.println("singleton+execute");
 	}
-	public write(String key){
+	public void write(String key){
 		System.out.println(key);
 	}
 }
